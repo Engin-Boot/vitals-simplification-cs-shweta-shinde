@@ -17,7 +17,7 @@ class MainClass
             Environment.Exit(1);
         }
     }
-    static int Main(string[] args)
+    public static int Main(string[] args)
     {
         
         ExpectTrue(Checker.vitalsAreOk(100, 95, 60));
