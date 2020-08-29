@@ -1,0 +1,5 @@
+C:\Users\Shweta Shinde\source\repos\Engin-Boot\vitals-simplification-cs-shweta-shinde\bin\Release\ConsoleApplication.exe
+C:\Users\Shweta Shinde\source\repos\Engin-Boot\vitals-simplification-cs-shweta-shinde\bin\Release\ConsoleApplication.pdb
+C:\Users\Shweta Shinde\source\repos\Engin-Boot\vitals-simplification-cs-shweta-shinde\obj\x86\Release\checker.csproj.CoreCompileInputs.cache
+C:\Users\Shweta Shinde\source\repos\Engin-Boot\vitals-simplification-cs-shweta-shinde\obj\x86\Release\ConsoleApplication.exe
+C:\Users\Shweta Shinde\source\repos\Engin-Boot\vitals-simplification-cs-shweta-shinde\obj\x86\Release\ConsoleApplication.pdb
