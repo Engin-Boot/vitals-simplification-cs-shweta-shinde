@@ -5,46 +5,27 @@ class Checker
 {
     public static bool vitalsAreOk(float bpm, float spo2, float respRate)
     {
-        return checkBpm(bpm) && checkSpo2(spo2) && checkRespRate(respRate);
+        bool bool_bpm, bool_spo2, bool_respRate;
+        bool_bpm = checkRange(70, 150, bpm, "BPM");
+        bool_spo2 = checkRange(90, 250, spo2, "SPO2");
+        bool_respRate = checkRange(30, 95, respRate, "RESP_RATE");
+        bool status = bool_bpm && bool_spo2 && bool_respRate;
+        return status;
 
     }
-    static bool checkBpm(float bpm)
+
+    static bool checkRange(float low_limit, float high_limit, float vital, string vitalType)
     {
-        bool low = bpm < 70;
-        bool high = bpm > 150;
-        if(low)
-        {
-            Console.WriteLine("BPM is LOW {0}",bpm);
-            return false;
-        }
-        if(high)
-        {
-            Console.WriteLine("BPM is HIGH {0}",bpm);
-            return false;
-        }
-        return true;
-    }
-    static bool checkSpo2(float spo2)
-    {
-        bool low= (spo2 < 90);
-        if(low)
-        {
-            Console.WriteLine("SPO2 is LOW {0}",spo2);
-        }
-        return true;
-    }
-    static bool checkRespRate(float respRate)
-    {
-        bool low = (respRate < 30);
-        bool high = (respRate > 95);
+        bool low = vital < low_limit;
+        bool high = vital > high_limit;
         if (low)
         {
-            Console.WriteLine("RESP_RATE is LOW {0}", respRate);
+            Console.WriteLine("{0} is LOW {1}",vitalType,vital);
             return false;
         }
         if (high)
         {
-            Console.WriteLine("RESP_RATE is HIGH {0}", respRate);
+            Console.WriteLine("{0} is HIGH {1}", vitalType, vital);
             return false;
         }
         return true;
